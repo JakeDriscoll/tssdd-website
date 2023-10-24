@@ -1,0 +1,345 @@
+<html>
+  <head>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <div
+      x-data="{ 
+        oHome: false, oGeneral: false, oRevenue: false, oDocs: true, oBoard: false, oContact: false,
+        hideOthers() {
+            this.oHome = false
+            this.oGeneral = false
+            this.oRevenue = false
+            this.oDocs = false
+            this.oBoard = false
+            this.oContact = false
+          }
+    }"
+    >
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a href="#" @click="hideOthers(); oHome = true" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+        <a href="#" @click="hideOthers(); oGeneral = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">General</a>
+        <a href="#" @click="hideOthers(); oRevenue = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Revenue</a>
+        <a href="#" @click="hideOthers(); oDocs = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Documents</a>
+        <a href="#" @click="hideOthers(); oBoard = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Board</a>
+        <a href="#" @click="hideOthers(); oContact = true" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Contact</a>
+      </div>
+      <div class="w3-main" style="padding-top: 40px">
+        <div class="wrap">
+          <div class="site-branding-text">
+            <h1 class="site-title">
+              <a href="https://www.tssdd.org/" rel="home">Tampa Shores Special Dependent District</a>
+            </h1>
+
+            <p class="site-description">
+              Tampa Shores Special Dependent District's mission is to provide for the beautification and betterment of the right of ways and common areas of the
+              Tampa Shores/Imperial Key Waterfront Community.
+            </p>
+          </div>
+          <!-- .site-branding-text -->
+        </div>
+        <!-- .wrap -->
+      </div>
+      <!-- .site-branding -->
+
+      <!-- <button class="button-11" @click="hideOthers(); oHome = true">Home</button>
+    <button class="button-11" @click="hideOthers(); oGeneral = true">General information</button>
+    <button class="button-11" @click="hideOthers(); oRevenue = true">Revenue information</button>
+    <button class="button-11" @click="hideOthers(); oDocs = true">Documents</button>
+    <button class="button-11" @click="hideOthers(); oBoard = true">Board Members</button>
+    <button class="button-11" @click="hideOthers(); oContact = true">Contact Us</button> -->
+      <!-- <button @click="hideOthers(); oHome = true">Home</button>
+      <button @click="hideOthers(); oGeneral = true">General information</button>
+      <button @click="hideOthers(); oRevenue = true">Revenue information</button>
+      <button @click="hideOthers(); oDocs = true">Documents</button>
+      <button @click="hideOthers(); oBoard = true">Board Members</button>
+      <button @click="hideOthers(); oContact = true">Contact Us</button> -->
+      <hr />
+
+      <!-- Home Section-->
+      <div class="site-content-contain" x-show="oHome">
+        <div id="content" class="site-content">
+          <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
+              <article id="post-8" class="twentyseventeen-panel post-8 page type-page status-publish hentry">
+                <div class="panel-content">
+                  <div class="wrap">
+                    <header class="entry-header">
+                      <h2 class="entry-title">Home</h2>
+                    </header>
+                    <!-- .entry-header -->
+
+                    <div class="entry-content">
+                      <p>
+                        <img
+                          class="wp-image-129 aligncenter"
+                          src="https://www.tssdd.org/wp-content/uploads/2020/05/Notice-of-meeting-169x300.png"
+                          alt=""
+                          width="233"
+                          height="414"
+                        />
+                      </p>
+                      <p style="text-align: center">Following the Annual budgetary meeting, the regular Monthly TSSDD meeting will follow at 19:30.</p>
+                    </div>
+                    <!-- .entry-content -->
+                  </div>
+                  <!-- .wrap -->
+                </div>
+                <!-- .panel-content -->
+              </article>
+              <!-- #post-## -->
+            </main>
+            <!-- #main -->
+          </div>
+          <!-- #primary -->
+        </div>
+        <!-- #content -->
+      </div>
+      <!-- General Section-->
+      <div class="site-content-contain" x-show="oGeneral">
+        <div id="content" class="site-content">
+          <div class="wrap">
+            <div id="primary" class="content-area">
+              <main id="main" class="site-main" role="main">
+                <article id="post-32" class="post-32 page type-page status-publish hentry">
+                  <header class="entry-header">
+                    <h1 class="entry-title">General Information</h1>
+                  </header>
+                  <!-- .entry-header -->
+                  <div class="entry-content">
+                    <p>Tampa Shores Special Dependent District, Established December 1, 1999</p>
+
+                    <p>Monthly Meetings are held the third Tuesday of every month at 10706 Donbrese Ave, Tampa, FL 33615 at 19:30hours</p>
+
+                    <p>
+                      <a href="https://tssdd.org/files/tampa-shores-special-dependent-district-ordinance-99-27-as-amended.pdf"
+                        >Full text of Special Districts charter (creation document County ordinance 99-27):</a
+                      >
+                    </p>
+
+                    <p>
+                      Public Purpose statement:<br /><br />Tampa Shores Special Dependent District’s mission is to provide for the beautification and betterment
+                      of the right of ways and common areas of the Tampa Shores/Imperial Key Waterfront Community.
+                    </p>
+
+                    <p>Services Provided: Maintaining and improving rights of way and common areas in this district</p>
+
+                    <figure class="wp-block-image">
+                      <img
+                        src="https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-1024x672.png"
+                        alt=""
+                        class="wp-image-74"
+                        srcset="
+                          https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-1024x672.png 1024w,
+                          https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-300x197.png   300w,
+                          https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-768x504.png   768w,
+                          https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map.png          1075w
+                        "
+                        sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"
+                      />
+                      <figcaption>TSSDD Boundaries</figcaption>
+                    </figure>
+
+                    <p>Our Ethics:&nbsp;<a href="http://www.ethics.state.fl.us/">http://www.ethics.state.fl.us/</a></p>
+
+                    <p>
+                      STATUE(S) UNDER WHICH DISTRICT OPERATES:<br /><a href="https://www.flsenate.gov/Laws/Statutes/2018/Chapter189"
+                        >Chapter 189, Florida Statues- Uniform Special District Accountability Act.</a
+                      >
+                    </p>
+
+                    <p>
+                      STATUTORY AUTHORITY FOR THE LEVY OF THE TAX, FEE, ASSESSMENT, OR CHARGE:<br />Collect via Ordinance 99-27 established by Hillsborough
+                      County Board of County Commissioners
+                    </p>
+
+                    <p>
+                      <a href="https://apps.fldfs.com/LocalGov/Reports">Department of Financial Services</a>
+                      <br />
+                    </p>
+                  </div>
+                  <!-- .entry-content -->
+                </article>
+                <!-- #post-## -->
+              </main>
+              <!-- #main -->
+            </div>
+            <!-- #primary -->
+          </div>
+          <!-- .wrap -->
+        </div>
+        <!-- #content -->
+      </div>
+      <!-- Revenue Section-->
+      <div class="site-content-contain" x-show="oRevenue">
+        <div id="content" class="site-content">
+          <div class="wrap">
+            <div id="primary" class="content-area">
+              <main id="main" class="site-main" role="main">
+                <article id="post-34" class="post-34 page type-page status-publish hentry">
+                  <header class="entry-header">
+                    <h1 class="entry-title">Revenue Information</h1>
+                  </header>
+                  <!-- .entry-header -->
+                  <div class="entry-content">
+                    <p>Current Rate is $80 per unit, collected annually</p>
+                    <p>Fiscal Year ends last day of September</p>
+                    <p>For Budget and Financials, please see Documents section</p>
+                  </div>
+                  <!-- .entry-content -->
+                </article>
+                <!-- #post-## -->
+              </main>
+              <!-- #main -->
+            </div>
+            <!-- #primary -->
+          </div>
+          <!-- .wrap -->
+        </div>
+        <!-- #content -->
+      </div>
+      <!-- Documents Section-->
+      <div class="site-content-contain" x-show="oDocs">
+        <header class="entry-header">
+          <h1 class="entry-title">Documents</h1>
+        </header>
+        <ul
+          x-data="{ files: [
+                    { url: 'https://tssdd.org/files/', label:'TSSDD-FY-19-adopted-budget'},
+                    { url: 'https://tssdd.org/files/', label:'TSSDD-FY-18-adopted-budget'},
+                    { url: 'https://tssdd.org/files/', label:'TSSDD-FY18-Financial-Statement'},
+                    { url: 'https://tssdd.org/files/', label:'FY20-Budget'},
+                    { url: 'https://tssdd.org/files/', label:'FY20-Budget-1'},
+                    { url: 'https://tssdd.org/files/', label:'FY21-Budget'},
+                    { url: 'https://tssdd.org/files/', label:'Full text of Special Districts charter (creation document County ordinance 99-27)'}
+                ]}"
+        >
+          <template x-for="file in files" :key="file.label">
+            <li><a x-text="file.label" x-bind:href="file.url"></a></li>
+          </template>
+        </ul>
+      </div>
+      <!-- Board Section-->
+      <div class="site-content-contain" x-show="oBoard">
+        <header class="entry-header">
+          <h1 class="entry-title">Board Members</h1>
+        </header>
+        <!-- .entry-header -->
+        <p>Governing Body Members appointed by Board of Trustees</p>
+        <div
+          class="entry-content"
+          x-data="{ members: [
+                    { email: 'bradley.ware@tssdd.org', label:'Bradley Ware, President', address:'5741 Imperial Key, Tampa, FL 33615', term:'September 2024'},
+                    { email: 'patrice.hubbs@tssdd.org', label:'Patrice Hubbs, Vice-President', address:'10706 Donbrese Ave, Tampa, FL 33615', term:'September 2022'},
+                    { email: 'tim.leal@tssdd.org', label:'Tim Leal', address:'5723 Imperial Key, Tampa, FL 33615', term:'September 2024'},
+                    { email: 'michelle.lashiew@tssdd.org', label:'Michelle Lashiew', address:'10710 Dowry Ave, Tampa, FL 33615', term:'September 2022'},
+                    { email: 'kevin.henika@tampagov.net', label: 'Kevin Henika', address:'10731 Drummond Rd., Tampa, FL 33615', term:'September 2022'},
+                    { email: 'kathie.miley@tssdd.org', label:'Kathie Miley', address:'5825 Imperial Key, Tampa, FL 33615', term:'September 2024'},
+                    { email: 'ed.ille@tssdd.org', label:'Ed Ille', address:'10730 Dowry Ave, Tampa, FL 33615', term:'September 2024'}
+                ]}"
+        >
+          <template x-for="member in members">
+            <p>
+              <span x-text="member.label"></span><br />
+              <span x-text="member.address"></span><br />
+              <a x-text="member.email" x-bind:href="'mailto:' + member.email + '?Subject=Tampa%20Shores%20Special%20Dependent%20District'"></a><br />
+              <span x-text="'Term: ' + member.term"></span><br />
+            </p>
+          </template>
+          <div>
+            <!-- <p>
+                      Bradley Ware, President<br />5741 Imperial Key, Tampa, FL 33615&nbsp;<br /><a
+                        href="mailto:bradley.ware@tssdd.org?Subject=Tampa%20Shores%20Special%20Dependent%20District"
+                        >bradley.ware@tssdd.org</a
+                      ><br />Term: September 2024
+                    </p>
+
+                    <p>
+                      Patrice Hubbs, Vice-President <br />10706 Donbrese Ave, Tampa, FL 33615&nbsp;<br /><a
+                        href="mailto:patrice.hubbs@tssdd.org?Subject=Tampa%20Shores%20Special%20Dependent%20District"
+                        >patrice.hubbs@tssdd.org</a
+                      >&nbsp;<br />Term: September 2022
+                    </p>
+
+                    <p>
+                      Tim Leal&nbsp;<br />5723 Imperial Key, Tampa, FL 33615&nbsp;<br /><a
+                        href="mailto:tim.leal@tssdd.org?Subject=Tampa%20Shores%20Special%20Dependent%20District"
+                        >tim.leal@tssdd.org</a
+                      ><br />Term: September 2024
+                    </p>
+
+                    <p>Michelle Lashiew<br />10710 Dowry Ave, Tampa, FL 33615<br />michelle.lashiew@tssdd.org<br />Term: September 2022</p>
+
+                    <p>
+                      Kevin Henika&nbsp;<br />10731 Drummond Rd., Tampa, FL 33615&nbsp;<br /><a
+                        href="mailto:kevin.henika@tampagov.net?Subject=Tampa%20Shores%20Special%20Dependent%20District"
+                        >kevin.henika@tampagov.net</a
+                      ><br />Term: September 2022
+                    </p>
+
+                    <p>
+                      Kathie Miley&nbsp;<br />5825 Imperial Key, Tampa, FL 33615&nbsp;<br /><a
+                        href="mailto:miley.kathie@gmail.com?Subject=Tampa%20Shores%20Special%20Dependent%20District"
+                        >kathie.miley@tssdd.org</a
+                      ><br />Term: September 2024
+                    </p>
+
+                    <p>
+                      Ed Ille&nbsp;<br />10730 Dowry Ave, Tampa, FL 33615&nbsp;<br /><a
+                        href="mailto:ed.ille@tssdd.org?Subject=Tampa%20Shores%20Special%20Dependent%20District"
+                        >ed.ille@tssdd.org</a
+                      ><br />Term: September 2024
+                    </p> -->
+          </div>
+        </div>
+        <!-- #content -->
+      </div>
+      <!-- Contact Section-->
+      <div class="site-content-contain" x-show="oContact">
+        <header class="entry-header">
+          <h1 class="entry-title">Contact Us</h1>
+        </header>
+        <!-- .entry-header -->
+        <div
+          class="entry-content"
+          x-data="{ agents: [
+                    { label:'President Bradley Ware', address:'5741 Imperial Key, Tampa, FL 33615', phone:'813-855-6997', email: 'bradley.ware@tssdd.org'},
+                    { label:'Vice President Patrice Hubbs', address:'10706 Donbrese Ave, Tampa, FL 33615', phone:'813-727-2674', email: 'patrice.hubbs@tssdd.org'}
+                ]}"
+        >
+          <p>Registered Agent:</p>
+
+          <template x-for="member in agents">
+            <p>
+              <span x-text="member.label"></span><br />
+              <span x-text="member.address"></span><br />
+              <span x-text="member.phone"></span><br />
+              <a x-text="member.email" x-bind:href="'mailto:' + member.email + '?Subject=Tampa%20Shores%20Special%20Dependent%20District'"></a><br />
+              <a href="http://www.tssdd.org/">https://www.tssdd.org</a>
+            </p>
+          </template>
+          <!-- <p>
+                      President Bradley Ware<br />5741 Imperial Key, Tampa, FL 33615&nbsp;<br />813-855-6997 <br />bradley.ware@tssdd.org<br /><a
+                        href="http://www.tssdd.org/"
+                        >https://www.tssdd.org</a
+                      >
+                    </p>
+
+                    <p>Secondary Contact:</p>
+
+                    <p>
+                      Vice President Patrice Hubbs<br />813-727-2674 <br />patrice.hubbs@tssdd.org<br /><a href="http://www.tssdd.org/"
+                        >https://www.tssdd.org</a
+                      >
+                    </p> -->
+        </div>
+        <!-- .entry-content -->
+      </div>
+    </div>
+  </body>
+</html>
