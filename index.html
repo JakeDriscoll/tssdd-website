@@ -10,7 +10,7 @@
   <body>
     <div
       x-data="{ 
-        oHome: false, oGeneral: false, oRevenue: false, oDocs: true, oBoard: false, oContact: false,
+        oHome: true, oGeneral: false, oRevenue: false, oDocs: false, oBoard: false, oContact: false,
         hideOthers() {
             this.oHome = false
             this.oGeneral = false
@@ -30,150 +30,99 @@
         <a href="#" @click="hideOthers(); oContact = true" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Contact</a>
       </div>
       <div class="w3-main" style="padding-top: 40px">
-        <div class="wrap">
-          <div class="site-branding-text">
-            <h1 class="site-title">
-              <a href="https://www.tssdd.org/" rel="home">Tampa Shores Special Dependent District</a>
-            </h1>
+        <h1 class="site-title">
+          <a href="https://www.tssdd.org/" rel="home">Tampa Shores Special Dependent District</a>
+        </h1>
 
-            <p class="site-description">
-              Tampa Shores Special Dependent District's mission is to provide for the beautification and betterment of the right of ways and common areas of the
-              Tampa Shores/Imperial Key Waterfront Community.
-            </p>
-          </div>
-          <!-- .site-branding-text -->
-        </div>
-        <!-- .wrap -->
+        <p class="site-description">
+          Tampa Shores Special Dependent District's mission is to provide for the beautification and betterment of the right of ways and common areas of the
+          Tampa Shores/Imperial Key Waterfront Community.
+        </p>
       </div>
       <!-- .site-branding -->
-
-      <!-- <button class="button-11" @click="hideOthers(); oHome = true">Home</button>
-    <button class="button-11" @click="hideOthers(); oGeneral = true">General information</button>
-    <button class="button-11" @click="hideOthers(); oRevenue = true">Revenue information</button>
-    <button class="button-11" @click="hideOthers(); oDocs = true">Documents</button>
-    <button class="button-11" @click="hideOthers(); oBoard = true">Board Members</button>
-    <button class="button-11" @click="hideOthers(); oContact = true">Contact Us</button> -->
-      <!-- <button @click="hideOthers(); oHome = true">Home</button>
-      <button @click="hideOthers(); oGeneral = true">General information</button>
-      <button @click="hideOthers(); oRevenue = true">Revenue information</button>
-      <button @click="hideOthers(); oDocs = true">Documents</button>
-      <button @click="hideOthers(); oBoard = true">Board Members</button>
-      <button @click="hideOthers(); oContact = true">Contact Us</button> -->
       <hr />
 
       <!-- Home Section-->
       <div class="site-content-contain" x-show="oHome">
-        <div id="content" class="site-content">
-          <div id="primary" class="content-area">
-            <main id="main" class="site-main" role="main">
-              <article id="post-8" class="twentyseventeen-panel post-8 page type-page status-publish hentry">
-                <div class="panel-content">
-                  <div class="wrap">
-                    <header class="entry-header">
-                      <h2 class="entry-title">Home</h2>
-                    </header>
-                    <!-- .entry-header -->
+        <header class="entry-header">
+          <h2 class="entry-title">Home</h2>
+        </header>
+        <!-- .entry-header -->
 
-                    <div class="entry-content">
-                      <p>
-                        <img
-                          class="wp-image-129 aligncenter"
-                          src="https://www.tssdd.org/wp-content/uploads/2020/05/Notice-of-meeting-169x300.png"
-                          alt=""
-                          width="233"
-                          height="414"
-                        />
-                      </p>
-                      <p style="text-align: center">Following the Annual budgetary meeting, the regular Monthly TSSDD meeting will follow at 19:30.</p>
-                    </div>
-                    <!-- .entry-content -->
-                  </div>
-                  <!-- .wrap -->
-                </div>
-                <!-- .panel-content -->
-              </article>
-              <!-- #post-## -->
-            </main>
-            <!-- #main -->
-          </div>
-          <!-- #primary -->
+        <div class="entry-content">
+          <p>
+            <img
+              class="wp-image-129 aligncenter"
+              src="https://www.tssdd.org/wp-content/uploads/2020/05/Notice-of-meeting-169x300.png"
+              alt=""
+              width="233"
+              height="414"
+            />
+          </p>
+          <p style="text-align: center">Following the Annual budgetary meeting, the regular Monthly TSSDD meeting will follow at 19:30.</p>
         </div>
-        <!-- #content -->
+        <!-- .entry-content -->
       </div>
       <!-- General Section-->
       <div class="site-content-contain" x-show="oGeneral">
-        <div id="content" class="site-content">
-          <div class="wrap">
-            <div id="primary" class="content-area">
-              <main id="main" class="site-main" role="main">
-                <article id="post-32" class="post-32 page type-page status-publish hentry">
-                  <header class="entry-header">
-                    <h1 class="entry-title">General Information</h1>
-                  </header>
-                  <!-- .entry-header -->
-                  <div class="entry-content">
-                    <p>Tampa Shores Special Dependent District, Established December 1, 1999</p>
+        <header class="entry-header">
+          <h1 class="entry-title">General Information</h1>
+        </header>
+        <!-- .entry-header -->
+        <div class="entry-content">
+          <p>Tampa Shores Special Dependent District, Established December 1, 1999</p>
 
-                    <p>Monthly Meetings are held the third Tuesday of every month at 10706 Donbrese Ave, Tampa, FL 33615 at 19:30hours</p>
+          <p>Monthly Meetings are held the third Tuesday of every month at 10706 Donbrese Ave, Tampa, FL 33615 at 19:30hours</p>
 
-                    <p>
-                      <a href="https://tssdd.org/files/tampa-shores-special-dependent-district-ordinance-99-27-as-amended.pdf"
-                        >Full text of Special Districts charter (creation document County ordinance 99-27):</a
-                      >
-                    </p>
+          <p>
+            <a href="https://tssdd.org/files/tampa-shores-special-dependent-district-ordinance-99-27-as-amended.pdf"
+              >Full text of Special Districts charter (creation document County ordinance 99-27):</a
+            >
+          </p>
 
-                    <p>
-                      Public Purpose statement:<br /><br />Tampa Shores Special Dependent District’s mission is to provide for the beautification and betterment
-                      of the right of ways and common areas of the Tampa Shores/Imperial Key Waterfront Community.
-                    </p>
+          <p>
+            <h3>Public Purpose statement:</h3>
+            Tampa Shores Special Dependent District’s mission is to provide for the beautification and betterment of the
+            right of ways and common areas of the Tampa Shores/Imperial Key Waterfront Community.
+          </p>
 
-                    <p>Services Provided: Maintaining and improving rights of way and common areas in this district</p>
+          <p>Services Provided: Maintaining and improving rights of way and common areas in this district</p>
 
-                    <figure class="wp-block-image">
-                      <img
-                        src="https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-1024x672.png"
-                        alt=""
-                        class="wp-image-74"
-                        srcset="
-                          https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-1024x672.png 1024w,
-                          https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-300x197.png   300w,
-                          https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-768x504.png   768w,
-                          https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map.png          1075w
-                        "
-                        sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"
-                      />
-                      <figcaption>TSSDD Boundaries</figcaption>
-                    </figure>
+          <figure class="wp-block-image">
+            <img
+              src="https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-1024x672.png"
+              alt=""
+              class="wp-image-74"
+              srcset="
+                https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-1024x672.png 1024w,
+                https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-300x197.png   300w,
+                https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map-768x504.png   768w,
+                https://www.tssdd.org/wp-content/uploads/2019/04/TSSDD-map.png          1075w
+              "
+              sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"
+            />
+            <figcaption>TSSDD Boundaries</figcaption>
+          </figure>
 
-                    <p>Our Ethics:&nbsp;<a href="http://www.ethics.state.fl.us/">http://www.ethics.state.fl.us/</a></p>
+          <p>Our Ethics:&nbsp;<a href="http://www.ethics.state.fl.us/">http://www.ethics.state.fl.us/</a></p>
 
-                    <p>
-                      STATUE(S) UNDER WHICH DISTRICT OPERATES:<br /><a href="https://www.flsenate.gov/Laws/Statutes/2018/Chapter189"
-                        >Chapter 189, Florida Statues- Uniform Special District Accountability Act.</a
-                      >
-                    </p>
+          <p>
+            STATUE(S) UNDER WHICH DISTRICT OPERATES:<br /><a href="https://www.flsenate.gov/Laws/Statutes/2018/Chapter189"
+              >Chapter 189, Florida Statues- Uniform Special District Accountability Act.</a
+            >
+          </p>
 
-                    <p>
-                      STATUTORY AUTHORITY FOR THE LEVY OF THE TAX, FEE, ASSESSMENT, OR CHARGE:<br />Collect via Ordinance 99-27 established by Hillsborough
-                      County Board of County Commissioners
-                    </p>
+          <p>
+            STATUTORY AUTHORITY FOR THE LEVY OF THE TAX, FEE, ASSESSMENT, OR CHARGE:<br />Collect via Ordinance 99-27 established by Hillsborough County Board
+            of County Commissioners
+          </p>
 
-                    <p>
-                      <a href="https://apps.fldfs.com/LocalGov/Reports">Department of Financial Services</a>
-                      <br />
-                    </p>
-                  </div>
-                  <!-- .entry-content -->
-                </article>
-                <!-- #post-## -->
-              </main>
-              <!-- #main -->
-            </div>
-            <!-- #primary -->
-          </div>
-          <!-- .wrap -->
+          <p>
+            <a href="https://apps.fldfs.com/LocalGov/Reports">Department of Financial Services</a>
+            <br />
+          </p>
         </div>
-        <!-- #content -->
+        <!-- .entry-content -->
       </div>
       <!-- Revenue Section-->
       <div class="site-content-contain" x-show="oRevenue">
@@ -215,7 +164,7 @@
                     { url: 'https://tssdd.org/files/', label:'TSSDD-FY18-Financial-Statement'},
                     { url: 'https://tssdd.org/files/', label:'FY20-Budget'},
                     { url: 'https://tssdd.org/files/', label:'FY20-Budget-1'},
-                    { url: 'https://tssdd.org/files/', label:'FY21-Budget'},
+                    { url: 'assets/FY21-Budget.pdf', label:'FY21-Budget'},
                     { url: 'https://tssdd.org/files/', label:'Full text of Special Districts charter (creation document County ordinance 99-27)'}
                 ]}"
         >
