@@ -1,6 +1,8 @@
 <html>
   <head>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css" />
@@ -47,8 +49,9 @@
         ]
     }"
   >
-    <!-- Section display control. Each button calls hideSections, then enables the section it's visible for-->
+  <!-- Main Content div-->
     <div>
+    <!-- Section display control. Each button calls hideSections, then enables the section it's visible for-->
       <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
         <a href="#" @click="hideSections(); oHome = true" class="w3-bar-item w3-button w3-theme-l1">Home</a>
         <a href="#" @click="hideSections(); oGeneral = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">General</a>
@@ -67,7 +70,6 @@
           Tampa Shores/Imperial Key Waterfront Community.
         </p>
       </div>
-      <!-- .site-branding -->
       <hr />
 
       <!-- Home Section-->
@@ -75,7 +77,6 @@
         <header class="entry-header">
           <h2 class="entry-title">Home</h2>
         </header>
-        <!-- .entry-header -->
 
         <div class="entry-content">
           <p>
@@ -89,14 +90,12 @@
           </p>
           <p style="text-align: center">Following the Annual budgetary meeting, the regular Monthly TSSDD meeting will follow at 19:30.</p>
         </div>
-        <!-- .entry-content -->
       </div>
       <!-- General Section-->
       <div class="site-content-contain" x-show="oGeneral">
         <header class="entry-header">
           <h1 class="entry-title">General Information</h1>
         </header>
-        <!-- .entry-header -->
         <div class="entry-content">
           <p>Tampa Shores Special Dependent District, Established December 1, 1999</p>
 
@@ -155,14 +154,13 @@
         <header class="entry-header">
           <h1 class="entry-title">Revenue Information</h1>
         </header>
-        <!-- .entry-header -->
         <div class="entry-content">
           <p>Current Rate is $80 per unit, collected annually</p>
           <p>Fiscal Year ends last day of September</p>
           <p>For Budget and Financials, please see Documents section</p>
         </div>
-        <!-- .entry-content -->
       </div>
+
       <!-- Documents Section-->
       <div class="site-content-contain" x-show="oDocs">
         <header class="entry-header">
@@ -174,12 +172,12 @@
           </template>
         </ul>
       </div>
+
       <!-- Board Section-->
       <div class="site-content-contain" x-show="oBoard">
         <header class="entry-header">
           <h1 class="entry-title">Board Members</h1>
         </header>
-        <!-- .entry-header -->
         <p>Governing Body Members appointed by Board of Trustees</p>
         <div class="entry-content">
           <template x-for="member in members">
@@ -191,8 +189,8 @@
             </p>
           </template>
         </div>
-        <!-- #content -->
       </div>
+
       <!-- Contact Section-->
       <div class="site-content-contain" x-show="oContact">
         <header class="entry-header">
@@ -212,8 +210,8 @@
             </p>
           </template>
         </div>
-        <!-- .entry-content -->
       </div>
-    </div>
+
+    </div> <!-- End Main Content div-->
   </body>
 </html>
