@@ -1,14 +1,10 @@
 <html>
   <head>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" /> -->
   </head>
   <body
     x-data="{
@@ -53,7 +49,7 @@
     <div>
     <!-- Section display control. Each button calls hideSections, then enables the section it's visible for-->
       <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-        <a href="#" @click="hideSections(); oHome = true" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+        <a href="#" @click="hideSections(); oHome = true" class="w3-bar-item w3-button">Home</a>
         <a href="#" @click="hideSections(); oGeneral = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">General</a>
         <a href="#" @click="hideSections(); oRevenue = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Revenue</a>
         <a href="#" @click="hideSections(); oDocs = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Documents</a>
@@ -181,12 +177,12 @@
         <p>Governing Body Members appointed by Board of Trustees</p>
         <div class="entry-content">
           <template x-for="member in members">
-            <p>
-              <span x-text="member.label"></span><br />
+            <div class="board-member">
+              <b><span x-text="member.label"></span></b><br />
               <span x-text="member.address"></span><br />
               <a x-text="member.email" x-bind:href="'mailto:' + member.email + '?Subject=Tampa%20Shores%20Special%20Dependent%20District'"></a><br />
               <span x-text="'Term: ' + member.term"></span><br />
-            </p>
+            </div>
           </template>
         </div>
       </div>
@@ -201,13 +197,13 @@
           <p>Registered Agent:</p>
 
           <template x-for="member in agents">
-            <p>
-              <span x-text="member.label"></span><br />
+            <div class="board-member">
+              <b><span x-text="member.label"></span></b><br />
               <span x-text="member.address"></span><br />
               <span x-text="member.phone"></span><br />
               <a x-text="member.email" x-bind:href="'mailto:' + member.email + '?Subject=Tampa%20Shores%20Special%20Dependent%20District'"></a><br />
               <a href="http://www.tssdd.org/">https://www.tssdd.org</a>
-            </p>
+            </div>
           </template>
         </div>
       </div>

@@ -1,4 +1,17 @@
 /* CSS */
+.board-member {
+  padding: 1em;
+  border: thin solid black;
+  width: 30em;
+  margin: 1em;
+}
+.site-content-contain {
+  padding-left: 1em;
+}
+.entry-title, .site-title {
+  color:#2196f3;
+}
+/* Button 11 from https://getcssscan.com/css-buttons-examples */
 .button-11 {
   /* display: flex;
   flex-direction: column; */
@@ -19,11 +32,11 @@
   box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(16, 30, 60, 0.5);
   outline: 0;
 }
-html,body,h1,h2,h3,h4,h5,h6,p {font-family: "Roboto", sans-serif;}
+html,body,h1,h2,h3,h4,h5,h6,p {font-family: "Roboto", sans-serif !important;}
 
-/* COLOR THEME */
-/* Originally taken from https://www.w3schools.com/lib/w3-theme-blue.css*/
-.w3-theme-l5 {color:#000 !important; background-color:#f2f9fe !important}
+/* COLOR THEME reference https://www.w3schools.com/lib/w3-theme-blue.css */
+
+/* .w3-theme-l5 {color:#000 !important; background-color:#f2f9fe !important}
 .w3-theme-l4 {color:#000 !important; background-color:#d2eafd !important}
 .w3-theme-l3 {color:#000 !important; background-color:#a6d4fa !important}
 .w3-theme-l2 {color:#000 !important; background-color:#79bff8 !important}
@@ -44,5 +57,5 @@ html,body,h1,h2,h3,h4,h5,h6,p {font-family: "Roboto", sans-serif;}
 
 .w3-hover-theme:hover {color:#fff !important; background-color:#2196f3 !important}
 .w3-hover-text-theme:hover {color:#2196f3 !important}
-.w3-hover-border-theme:hover {border-color:#2196f3 !important}
+.w3-hover-border-theme:hover {border-color:#2196f3 !important} */
 /* END COLOR THEME */
