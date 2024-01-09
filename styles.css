@@ -3,13 +3,21 @@
   padding: 1em;
   border: thin solid black;
   width: 30em;
-  margin: 1em;
+  margin: 2em;
+}
+.content-header {
+  padding-top: 40px;
+  padding-left: 3em
 }
 .site-content-contain {
-  padding-left: 1em;
+  padding-left: 2em;
 }
 .entry-title, .site-title {
   color:#2196f3;
+}
+hr.tssdd {
+  border: 1px solid;
+  border-radius: 2px;
 }
 /* Button 11 from https://getcssscan.com/css-buttons-examples */
 .button-11 {
