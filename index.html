@@ -30,18 +30,18 @@
         ],
         // Board members displayed in the Board Section
         members: [
-            { email: 'bradley.ware@tssdd.org', label:'Bradley Ware, President', address:'5741 Imperial Key, Tampa, FL 33615', term:'September 2024'},
-            { email: 'patrice.hubbs@tssdd.org', label:'Patrice Hubbs, Vice-President', address:'10706 Donbrese Ave, Tampa, FL 33615', term:'September 2022'},
-            { email: 'tim.leal@tssdd.org', label:'Tim Leal', address:'5723 Imperial Key, Tampa, FL 33615', term:'September 2024'},
-            { email: 'michelle.lashiew@tssdd.org', label:'Michelle Lashiew', address:'10710 Dowry Ave, Tampa, FL 33615', term:'September 2022'},
+            { email: 'email pending', label:'Bradley Ware, President', address:'5741 Imperial Key, Tampa, FL 33615', term:'September 2024'},
+            { email: 'email pending', label:'Patrice Hubbs, Vice-President', address:'10706 Donbrese Ave, Tampa, FL 33615', term:'September 2022'},
+            { email: 'email pending', label:'Tim Leal', address:'5723 Imperial Key, Tampa, FL 33615', term:'September 2024'},
+            { email: 'email pending', label:'Michelle Lashiew', address:'10710 Dowry Ave, Tampa, FL 33615', term:'September 2022'},
             { email: 'kevin.henika@tampagov.net', label: 'Kevin Henika', address:'10731 Drummond Rd., Tampa, FL 33615', term:'September 2022'},
-            { email: 'kathie.miley@tssdd.org', label:'Kathie Miley', address:'5825 Imperial Key, Tampa, FL 33615', term:'September 2024'},
-            { email: 'ed.ille@tssdd.org', label:'Ed Ille', address:'10730 Dowry Ave, Tampa, FL 33615', term:'September 2024'}
+            { email: 'email pending', label:'Kathie Miley', address:'5825 Imperial Key, Tampa, FL 33615', term:'September 2024'},
+            { email: 'email pending', label:'Ed Ille', address:'10730 Dowry Ave, Tampa, FL 33615', term:'September 2024'}
         ],
         // Contact Agents displayed in the Contact Section
         agents: [
-            { label:'President Bradley Ware', address:'5741 Imperial Key, Tampa, FL 33615', phone:'813-855-6997', email: 'bradley.ware@tssdd.org'},
-            { label:'Vice President Patrice Hubbs', address:'10706 Donbrese Ave, Tampa, FL 33615', phone:'813-727-2674', email: 'patrice.hubbs@tssdd.org'},
+            { label:'President Bradley Ware', address:'5741 Imperial Key, Tampa, FL 33615', phone:'813-855-6997', email: 'email pending'},
+            { label:'Vice President Patrice Hubbs', address:'10706 Donbrese Ave, Tampa, FL 33615', phone:'813-727-2674', email: 'email pending'},
             { label:'Web Admin Jakob Driscoll', address:'Tampa, FL 33615', phone:'', email: 'jakob.driscoll@gmail.com'}
         ]
     }"
@@ -175,7 +175,8 @@
             <div class="board-member">
               <b><span x-text="member.label"></span></b><br />
               <span x-text="member.address"></span><br />
-              <a x-text="member.email" x-bind:href="'mailto:' + member.email + '?Subject=Tampa%20Shores%20Special%20Dependent%20District'"></a><br />
+              <span x-text="member.email" ></span><br />
+              <!-- <a x-text="member.email" x-bind:href="'mailto:' + member.email + '?Subject=Tampa%20Shores%20Special%20Dependent%20District'"></a><br /> -->
               <span x-text="'Term: ' + member.term"></span><br />
             </div>
           </template>
@@ -196,7 +197,8 @@
               <b><span x-text="member.label"></span></b><br />
               <span x-text="member.address"></span><br />
               <span x-text="member.phone"></span><br />
-              <a x-text="member.email" x-bind:href="'mailto:' + member.email + '?Subject=Tampa%20Shores%20Special%20Dependent%20District'"></a><br />
+              <span x-text="member.email" ></span><br />
+              <!-- <a x-text="member.email" x-bind:href="'mailto:' + member.email + '?Subject=Tampa%20Shores%20Special%20Dependent%20District'"></a><br /> -->
               <a href="http://www.tssdd.org/">https://www.tssdd.org</a>
             </div>
           </template>
