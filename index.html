@@ -20,12 +20,8 @@
         },
         // Displayed in the Document section in a bulleted list
         files: [
-            { url: 'https://tssdd.org/files/', label:'TSSDD-FY-19-adopted-budget'},
-            { url: 'https://tssdd.org/files/', label:'TSSDD-FY-18-adopted-budget'},
-            { url: 'https://tssdd.org/files/', label:'TSSDD-FY18-Financial-Statement'},
-            { url: 'https://tssdd.org/files/', label:'FY20-Budget'},
-            { url: 'https://tssdd.org/files/', label:'FY20-Budget-1'},
-            { url: 'assets/FY21-Budget.pdf', label:'FY21-Budget'},
+            { url: 'assets/FY23-Budget.pdf', label:'FY23-Budget'},
+            { url: 'assets/FY24-Budget.pdf', label:'FY24-Budget'},
             { url: 'https://tssdd.org/files/', label:'Full text of Special Districts charter (creation document County ordinance 99-27)'}
         ],
         // Board members displayed in the Board Section
@@ -43,6 +39,13 @@
             { label:'President Bradley Ware', address:'5741 Imperial Key, Tampa, FL 33615', phone:'813-855-6997', email: 'bware1@tampabay.rr.com'},
             { label:'Vice President Patrice Hubbs', address:'10706 Donbrese Ave, Tampa, FL 33615', phone:'813-727-2674', email: 'phubbs1994@gmail.com'},
             { label:'Web Admin Jakob Driscoll', address:'Tampa, FL 33615', phone:'', email: 'jakob.driscoll@gmail.com'}
+        ],
+        upcomingMeetings: [
+            {date: 'Tue Feb 20 2024'},
+            {date: 'Tue Mar 19 2024'},
+            {date: 'Tue Apr 16 2024'},
+            {date: 'Tue May 21 2024'},
+            {date: 'Tue Jun 18 2024'}
         ]
     }"
   >
@@ -91,6 +94,14 @@
           <p>Tampa Shores Special Dependent District, Established December 1, 1999</p>
 
           <p>Monthly Meetings are held the third Tuesday of every month at 10706 Donbrese Ave, Tampa, FL 33615 at 19:30hours</p>
+          <h3>Upcoming Meetings</h3>
+          <ul>
+            <template x-for="meeting in upcomingMeetings">
+             <li>
+              <span x-text="meeting.date"></span>
+             </li>
+            </template>
+          </ul>
 
           <a href="https://tssdd.org/files/tampa-shores-special-dependent-district-ordinance-99-27-as-amended.pdf"
             >Full text of Special Districts charter (creation document County ordinance 99-27):</a
@@ -159,7 +170,7 @@
         </header>
         <ul>
           <template x-for="file in files" :key="file.label">
-            <li><a x-text="file.label" x-bind:href="file.url"></a></li>
+            <li><a x-text="file.label" x-bind:href="file.url" x-bind:download="file.label"></a></li>
           </template>
         </ul>
       </div>
