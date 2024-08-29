@@ -18,6 +18,32 @@
             this.oBoard = false
             this.oContact = false
         },
+        upcomingMeetings: [],
+        GetNextSixMeetingDates() {
+            const nextMeetings = [];
+            let date = new Date();  // Start from the current date
+            let count = 0;
+        
+            while (count < 6) {
+                // Move to the first day of the next month if the current date is past the 3rd Tuesday of this month
+                date.setDate(1);
+                date.setMonth(date.getMonth() + 1);
+            
+                // Get the first day of the month
+                const firstDay = date.getDay();
+
+                // Calculate the date of the third Tuesday
+                const thirdTuesday = 1 + ((9 - firstDay + 7) % 7) + 14;
+                date.setDate(thirdTuesday);
+            
+                // Add to the list
+                nextMeetings.push({ date: date.toDateString() });
+            
+                count++;
+            }
+            this.upcomingMeetings = nextMeetings;
+            //return { upcomingMeetings };
+        },
         // Displayed in the Document section in a bulleted list
         files: [
             { url: 'assets/FY23-Budget.pdf', label:'FY23-Budget'},
@@ -40,15 +66,6 @@
             { label:'President Bradley Ware', address:'5741 Imperial Key, Tampa, FL 33615', phone:'813-855-6997', email: 'bware1@tampabay.rr.com'},
             { label:'Vice President Patrice Hubbs', address:'10706 Donbrese Ave, Tampa, FL 33615', phone:'813-727-2674', email: 'phubbs1994@gmail.com'},
             { label:'Web Admin Jakob Driscoll', address:'Tampa, FL 33615', phone:'', email: 'jakob.driscoll@gmail.com'}
-        ],
-        upcomingMeetings: [
-
-            {date: 'Tue Aug 20 2024'},
-            {date: 'Tue Sep 17 2024'},
-            {date: 'Tue Oct 15 2024'},
-            {date: 'Tue Nov 19 2024'},
-            {date: 'Tue Dec 17 2024'},
-            {date: 'Tue Jan 21 2025'}
         ]
     }"
   >
@@ -93,7 +110,7 @@
         <header class="entry-header">
           <h1 class="entry-title">General Information</h1>
         </header>
-        <div class="entry-content">
+        <div x-init="GetNextSixMeetingDates()" class="entry-content">
           <p>Tampa Shores Special Dependent District, Established December 1, 1999</p>
 
           <p>Monthly Meetings are held the third Tuesday of every month at 10706 Donbrese Ave, Tampa, FL 33615 at 19:30hours</p>
