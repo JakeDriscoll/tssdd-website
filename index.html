@@ -73,14 +73,14 @@
   <!-- Main Content div-->
     <div>
     <!-- Section display control. Each button calls hideSections, then enables the section it's visible for-->
-      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-        <a href="#" @click="hideSections(); oHome = true" class="w3-bar-item w3-button">Home</a>
-        <a href="#" @click="hideSections(); oGeneral = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">General</a>
-        <a href="#" @click="hideSections(); oRevenue = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Revenue</a>
-        <a href="#" @click="hideSections(); oDocs = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Documents</a>
-        <a href="#" @click="hideSections(); oBoard = true" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Board</a>
-        <a href="#" @click="hideSections(); oContact = true" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Contact</a>
-      </div>
+      <nav class="w3-bar w3-theme w3-left-align w3-large top-nav" aria-label="Main navigation">
+        <a href="#" @click.prevent="hideSections(); oHome = true" class="w3-bar-item w3-button">Home</a>
+        <a href="#" @click.prevent="hideSections(); oGeneral = true" class="w3-bar-item w3-button w3-hover-white">General</a>
+        <a href="#" @click.prevent="hideSections(); oRevenue = true" class="w3-bar-item w3-button w3-hover-white">Revenue</a>
+        <a href="#" @click.prevent="hideSections(); oDocs = true" class="w3-bar-item w3-button w3-hover-white">Documents</a>
+        <a href="#" @click.prevent="hideSections(); oBoard = true" class="w3-bar-item w3-button w3-hover-white">Board</a>
+        <a href="#" @click.prevent="hideSections(); oContact = true" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+      </nav>
       <div class="w3-main content-header">
         <h1 class="site-title">
           <a href="https://www.tssdd.org/" rel="home">Tampa Shores Special Dependent District</a>
