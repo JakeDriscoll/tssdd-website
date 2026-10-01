@@ -191,7 +191,7 @@
         </header>
         <ul>
           <template x-for="file in files" :key="file.label">
-            <li><a x-text="file.label" x-bind:href="file.url" x-bind:download="file.label"></a></li>
+            <li><a x-text="file.label" x-bind:href="file.url" target="_blank"></a></li>
           </template>
         </ul>
       </div>
